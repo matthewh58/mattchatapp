@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/messenger.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static',filename='scripts/messenger.js') }}"></script>
+    <meta charset="UTF-8">
+    <title>Matthew's Amazing Messenger App!</title>
+</head>
+<body class="createGroupBackground">
+    <a class="home" href="/home"> <img id="homeButton" onclick="returnHome()" src="https://img.icons8.com/ios/452/long-arrow-left.png"> </a>
+    <div class="column">
+        <h1> Create Group!!!!! </h1>
+        <br>
+        <input id="groupName" placeholder="Insert Name!">
+        <br>
+        <br>
+        <input id="groupImage" placeholder="Insert Image URL!">
+        <br>
+        <br>
+        <input id="groupDescription" placeholder="Insert Description!">
+        <br>
+        <br>
+        <br>
+        <span class="button" onclick="createGroup()"> Create Group! </span>
+        <br>
+        <span class="error" id="error"></span>
+    </div>
+</body>
+</html>

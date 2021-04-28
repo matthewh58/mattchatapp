@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/messenger.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static',filename='scripts/messenger.js') }}"></script>
+    <meta charset="UTF-8">
+    <title>Matthew's Amazing Messenger App!</title>
+    <script>
+        $( document ).ready(function() {
+            if ({{isGroup}} == 1){
+                groups()
+            }
+            else{
+                friends()
+            }
+        });
+    </script>
+</head>
+<body class="homeBackground">
+    <div class="row">
+        <div>
+            <a href="/home?isGroup=False"><img id="friendicon" src="https://img.icons8.com/ios/452/friends.png"></a>
+            <a href="/home?isGroup=True"><img id="groupicon" src="https://img.pngio.com/group-icon-png-15-clip-arts-for-free-download-on-een-2019-group-icon-png-512_511.png"></a>
+            {% if isGroup == 1 %}
+            <a href="/creategrouppage"><img id="addgroup" src="https://static.thenounproject.com/png/61728-200.png"></a>
+            {% endif %}
+        </div>
+        <h1 class="hometitle"> Home Page! </h1>
+        <a href="/settings"> <img class="settings" src="https://www.iconpacks.net/icons/2/free-settings-icon-3110-thumb.png"> </a>
+    </div>
+        <div class="row2">
+            <div class="users" id="people">
+            {% for u in users%}
+                <a href="/home?other={{u.id}}">
+                {% if other == u.id %}
+                <div class="selecteduserrow">
+                    <span>{{u.username}} </span>
+                    <img class="image" src="{{u.image}}">
+                </div>
+                {% endif %}
+                {% if other != u.id %}
+                <div class="userrow">
+                    <span>{{u.username}} </span>
+                    <img class="image" src="{{u.image}}">
+                </div>
+                {% endif %}
+                </a>
+            {% endfor %}
+            </div>
+            <div class="column3" id="groups">
+                {% for g in groups %}
+                {% if g.id == other %}
+                <a href="/home?other={{g.id}}&isGroup=True">
+                <div class="selectedgrouprow">
+                    <span> {{ g.name }} </span>
+                    <img src="{{g.image}}" class="groupimage">
+                </div>
+                </a>
+                {% endif %}
+                {% if g.id != other %}
+                <a href="/home?other={{g.id}}&isGroup=True">
+                <div class="groups">
+                    <span> {{ g.name }} </span>
+                    <img src="{{g.image}}" class="groupimage">
+                </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <div class="messages">
+                <div class="centeralignrow">
+                    <textarea rows="2" class="sendmessage" placeholder="Send a Message" id="message"> </textarea>
+                    <span class="button" onclick="messages({{other}}, {{isGroup}})"> Send </span>
+                </div>
+                <div class="messagebox">
+                    {% for m in messages%}
+                    <div class="messagerow">
+                        <img class="image2" src="{{m.userImage}}">
+                        <div class="column2">
+                            <span class="username"> {{m.username}} </span>
+                            <br>
+                            <span> {{m.message}} </span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+</body>
+</html>

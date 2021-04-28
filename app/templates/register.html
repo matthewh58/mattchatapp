@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/messenger.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static',filename='scripts/messenger.js') }}"></script>
+    <meta charset="UTF-8">
+    <title>Matthew's Amazing Messenger App!</title>
+</head>
+<body class="registerBackground">
+    <div class="column">
+        <br>
+        <br>
+        <br>
+        <span> Register Here! </span>
+        <br>
+        <a href="/login"> <span class="link"> Or Login Here! </span> </a>
+        <br>
+        <input id="username" placeholder="Insert Username Here!">
+        <br>
+        <br>
+        <input id="email" placeholder="Insert Email Here!">
+        <br>
+        <br>
+        <input id="password" placeholder="Insert Password Here!">
+        <br>
+        <br>
+        <input id="confirmPassword" placeholder="Confirm the Password!">
+        <br>
+        <span class="button" id="registerButton" onclick="register()"> Register! </span>
+        <br>
+        <span id="error">  </span>
+    </div>
+</body>
+</html>

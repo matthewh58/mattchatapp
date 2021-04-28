@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/messenger.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static',filename='scripts/messenger.js') }}"></script>
+    <meta charset="UTF-8">
+    <title>Matthew's Amazing Messenger App!</title>
+</head>
+<body>
+    <div class="column">
+        <br>
+        <br>
+        <br>
+        <span> Verify Here! </span>
+        <br>
+        <input class="biginput" id="passcode" placeholder="Check Your Mail For the Code!">
+        <br>
+        <br>
+        <br>
+        <span class="button" id="loginButton" onclick="verify()"> Verify Account! </span>
+        <br>
+        <span id="error" class="error">  </span>
+    </div>
+</body>
+</html>

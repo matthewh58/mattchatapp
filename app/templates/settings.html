@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/messenger.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static',filename='scripts/messenger.js') }}"></script>
+    <meta charset="UTF-8">
+    <title>Matthew's Amazing Messanger App!</title>
+</head>
+<body class="settingsBackground">
+    <a class="home" href="/home"> <img id="homeButton" onclick="returnHome()" src="https://img.icons8.com/ios/452/long-arrow-left.png"> </a>
+    <div class="column">
+        <h1> Settings Page!!! </h1>
+        <br>
+        <img class="image3" id="image" src="{{user.image}}">
+        <input id="newImage" placeholder="Insert Image URL!">
+        <br>
+        <br>
+        <span> {{user.username}} </span>
+        <input id="newUsername" placeholder="Insert New Username!">
+        <br>
+        <br>
+        <input id="newPass" placeholder="Change Password!">
+        <br>
+        <input id="oldPass" placeholder="Insert Old Password!">
+        <br>
+        <br>
+        <br>
+        <span class="button" onclick="changeUser()"> Confirm Changes! </span>
+        <br>
+        <span class="error" id="error"></span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+class Groups:    def __init__(self, id, name, description, image, created_time):        self.id = id        self.name = name        self.description = description        self.image = image        self.created_time = created_time

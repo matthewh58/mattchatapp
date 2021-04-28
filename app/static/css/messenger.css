@@ -1,0 +1,219 @@
+body{
+    background-image: linear-gradient(to left, red, white, blue)
+}
+
+.registerBackground{
+    background-image: linear-gradient(to left, blue, white, red)
+}
+
+.homeBackground{
+    background-image: linear-gradient(to left, yellow, cyan, purple)
+}
+
+.verifyBackground{
+    background-image: linear-gradient(to left, red, green, violet)
+}
+
+.settingsBackground{
+    background-image: linear-gradient(to left, maroon, purple, red)
+}
+
+.createGroupBackground{
+    background-image: linear-gradient(to left, green, magenta, blue)
+}
+
+
+.button{
+    background: blue;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.button:hover{
+    background: purple;
+    transition: 0.5s;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column3{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.link{
+    color: blue;
+}
+
+.biginput{
+    width: 200px;
+}
+
+.error{
+    color: red;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.row2{
+    display: flex;
+}
+
+.centeralignrow{
+    display: flex;
+    align-items: center;
+}
+
+#groupicon{
+    margin: 25px;
+    width: 150px;
+    border-radius: 75px;
+    height: 150px;
+}
+
+.settings{
+    width: 150px;
+    height: 150px;
+    margin: 25px;
+}
+
+#friendicon{
+    margin: 25px;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+}
+
+.hometitle{
+    padding-right: 150px;
+}
+
+.userrow{
+    background: white;
+    border: black 1px solid;
+    align-items: center;
+    display: flex;
+    margin-bottom: 3px;
+}
+
+.image{
+    width: 100px;
+    height: 100px;
+}
+
+.users{
+    width: 200px;
+}
+
+.messages{
+    width: 70vw;
+}
+
+.messagebox{
+    height: 70vh;
+    overflow: auto;
+}
+
+.messagerow{
+    border-radius: 20px;
+    padding: 10px;
+    background: #0000ff33;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+
+}
+
+.image2{
+    width: 50px;
+    height: 50px;
+    border: black 1px solid;
+}
+
+.image3{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.column2{
+    display: flex;
+    flex-direction: column;
+    padding-left: 17.5px;
+}
+
+.selecteduserrow{
+    background: #38ab4d;
+    border: black 5px solid;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    margin-bottom: 3px;
+}
+
+.selectedgrouprow{
+    background: #e33656;
+    border: black 5px solid;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    margin-bottom: 3px;
+}
+
+.sendmessage{
+    margin-left: 10px;
+    height: 25px;
+    width: 200px;
+    margin-right: 3px;
+}
+
+.username{
+    font-weight: 900;
+}
+
+#homeButton{
+    width: 150px;
+    height: 150px;
+}
+
+.home{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+
+.groups{
+    background: white;
+    border: black 2px solid;
+    align-items: center;
+    display: flex;
+    margin-bottom: 3px;
+}
+
+#groups{
+    display: none;
+}
+
+#people{
+    display: none;
+}
+
+.groupimage{
+    width: 50px;
+    height: 50px;
+}
+
+#addgroup{
+    margin: 25px;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+}
