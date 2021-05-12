@@ -1,8 +1,5 @@
-from mattchatapp import *
 import sqlite3
 import time
-from mattchatapp.message import *
-from mattchatapp import *
 import smtplib
 from flask import *
 from groups import *
@@ -11,6 +8,9 @@ from message import *
 
 app = Flask(__name__)
 
+@app.route("/")
+def test():
+    return "test"
 
 @app.route("/users")
 def getUsers():
